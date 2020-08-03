@@ -10,6 +10,9 @@ module FbApiTest
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+
+    Koala.config.api_version = 'v3.0'
+
     config.before_configuration do
 	  env_file = File.join(Rails.root, 'config', 'local_env.yml')
 	  YAML.load(File.open(env_file)).each do |key, value|

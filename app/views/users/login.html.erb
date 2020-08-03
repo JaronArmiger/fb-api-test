@@ -1,0 +1,8 @@
+<%# image_tag @user['picture']['data']['url'].to_s %>
+<% @image_urls.each do |url| %>
+  <%= image_tag url %>
+<% end %>
+<br>
+<%# image_tag @image_url %>
+<br>
+<%= link_to "home", root_path %>
