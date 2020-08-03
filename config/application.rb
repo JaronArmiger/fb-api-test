@@ -8,7 +8,6 @@ Bundler.require(*Rails.groups)
 
 module FbApiTest
   class Application < Rails::Application
-    config.force_ssl = (ENV["ENABLE_HTTPS"] == "yes")
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.before_configuration do
